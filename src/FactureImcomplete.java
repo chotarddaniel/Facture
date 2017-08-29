@@ -1,6 +1,11 @@
 
 public class FactureImcomplete {
-
+	public static int FACTURE_SOUS_TOTAL = 0;
+	public static int FACTURE_TPS = 1;
+	public static int FACTURE_TPQ = 2;
+	public static int FACTURE_TOTAL = 3; 
+	
+	
 	public static void main(String[] args) {
 		//System.out.println(calculerSommePrix(listeAchats));
 		//System.out.println("La taxe tps de 2 est" + calculerTaxeFederale(2));
@@ -39,10 +44,10 @@ public class FactureImcomplete {
 		
 		float [] facture = new float[4];
 		
-		facture[0] = sousTotal;
-		facture[1] = tps;
-		facture[2] = tvq;
-		facture[3] = total;
+		facture[FACTURE_SOUS_TOTAL] = sousTotal;
+		facture[FACTURE_TPS] = tps;
+		facture[FACTURE_TPQ] = tvq;
+		facture[FACTURE_TOTAL] = total;
 		
 		return facture;
 		//faire un return avec les valeurs de dans 
