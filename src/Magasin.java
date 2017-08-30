@@ -15,8 +15,8 @@ public class Magasin
 		// Ce n'etait que sa recette, aucun espace mémoire n'est utilisé avec juste ceci
 		Facture factureDuLundi = new Facture(); // on crée pour vrai les variables de la recettes (listeAchats, sousTotal, tps, tpq, total)
 		
-		float tpsLundi = factureDuLundi.tps; // Lecture l'objet  et remplissage de tpsMardi par factureDuMardi.tps
-		factureDuLundi.tps = 5f;//Ecriture dans facture du mardi
+		float tpsLundi = factureDuLundi.tps; // Lecture l'objet  et remplissage de tpsLundi par factureDuLundi.tps
+		factureDuLundi.tps = 5f;//Ecriture dans facture du lundi
 		
 		// Facture.tps = incorrect car la facture ne reserve pas d'espace
 		// factureDuLundi.tps = 5f; correct
@@ -87,9 +87,4 @@ public class Magasin
 	{
 		return montant = 0.09975f;
 	}
-	
-	public static final int FACTURE_SOUS_TOTAL = 0; //final reserve une plage en memoire pour la variable et elle ne peux etre modifier.
-	public static final int FACTURE_TPS = 1;
-	public static final int FACTURE_TPQ = 2;
-	public static final int FACTURE_TOTAL = 3; 
 }
