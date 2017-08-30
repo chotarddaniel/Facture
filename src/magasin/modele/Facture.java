@@ -1,12 +1,13 @@
+package magasin.modele;
 import java.text.NumberFormat;
 
 public class Facture {
 	
-	float [] listeAchats = new float[5];
-	float sousTotal;
-	float tps;
-	float tvq;
-	float total;
+	protected float [] listeAchats = new float[5];
+	protected float sousTotal;
+	protected float tps;
+	protected float tvq;
+	protected float total;
 	
 	public Facture() // fonction constructeur aui met toute les vqriqbles a 0
 	{
