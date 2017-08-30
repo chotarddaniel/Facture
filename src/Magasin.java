@@ -38,17 +38,7 @@ public class Magasin
 		//faire un return avec les valeurs de dans 
 	}
 	
-	public static float calculerSommePrix(float [] listePrix)
-	{
-		float somme = 0;
-		
-		for(int position = 0; position < listePrix.length; position++)
-		{
-			somme += listePrix[position];
-		}
-		
-		return somme;
-	}
+	
 	
 	
 }

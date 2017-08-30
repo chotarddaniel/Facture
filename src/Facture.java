@@ -23,7 +23,7 @@ public class Facture {
 
 	public Facture preparerFacture()
 	{
-		//facture.sousTotal = calculerSommePrix(facture.listeAchats);
+		this.sousTotal = calculerSommePrix(this.listeAchats);
 		this.tps = calculerTaxeFederale(this.sousTotal);
 		this.tvq = calculerTaxeProvincial(this.sousTotal);
 		this.total = this.sousTotal + this.tps + this.tvq;		
@@ -38,6 +38,18 @@ public class Facture {
 	public static float calculerTaxeProvincial(float montant)
 	{
 		return montant = 0.09975f;
+	}
+	
+	public static float calculerSommePrix(float [] listePrix)
+	{
+		float somme = 0;
+		
+		for(int position = 0; position < listePrix.length; position++)
+		{
+			somme += listePrix[position];
+		}
+		
+		return somme;
 	}
 }
 
