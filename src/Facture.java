@@ -8,6 +8,15 @@ public class Facture {
 	float tvq;
 	float total;
 	
+	public Facture() // fonction constructeur aui met toute les vqriqbles a 0
+	{
+		this.sousTotal = 0;
+		this.tps = 0;
+		this.tvq = 0;
+		this.total = 0;
+		this.listeAchats = this.lireAchats();
+	}
+	
 	public void afficher()
 	{
 		NumberFormat imprimeurNombres = NumberFormat.getCurrencyInstance();
@@ -58,7 +67,7 @@ public class Facture {
 		return somme;
 	}
 	
-	public void lireAchats()
+	public float [] lireAchats()
 	{
 		float [] listeAchats = new float [5];
 		listeAchats [0] = 2.7f;
@@ -67,7 +76,7 @@ public class Facture {
 		listeAchats [3] = 4.25f;
 		listeAchats [4] = 1.0f;
 		
-		this.listeAchats = listeAchats;
+		return listeAchats;
 		//faire un return avec les valeurs de dans 
 	}
 	
