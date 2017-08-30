@@ -16,9 +16,10 @@ public class Magasin
 		
 		Facture factureDuMardi = new Facture(); // instanciation    creer un objet 
 		float tpsMardi = factureDuMardi.tps; //
+		
 		factureDuMardi.listeAchats = lireAchats(); // dans l'objet qui est du type de la classe aui est de la sorte facture aue j4ecrase et aue je met le tableau
 		factureDuMardi = preparerFacture(factureDuMardi);
-		afficherFacture(factureDuMardi);
+		factureDuMardi.afficherFacture();
 	}
 	
 	
@@ -44,20 +45,6 @@ public class Magasin
 		//faire un return avec les valeurs de dans 
 	}
 	
-	public static void afficherFacture(Facture facture)
-	{
-		for(int numeroAchat = 0; numeroAchat < facture.listeAchats.length;numeroAchat++ )
-		{
-			float achat = facture.listeAchats[numeroAchat];
-			System.out.println(achat);
-		}
-		System.out.println("--------------------------");
-		System.out.println("Sous-Total:" + facture.sousTotal + "$");
-		System.out.println("TPS:" + facture.tps + "$");
-		System.out.println("TVQ:" + facture.tvq + "$");
-		System.out.println("--------------------------");
-		System.out.println("Total:" + facture.total + "$");
-	}
 	public static float calculerSommePrix(float [] listePrix)
 	{
 		float somme = 0;
