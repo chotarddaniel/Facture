@@ -17,7 +17,7 @@ public class Magasin
 		Facture factureDuMardi = new Facture(); // instanciation    creer un objet 
 		float tpsMardi = factureDuMardi.tps; //
 		
-		factureDuMardi.listeAchats = lireAchats(); // dans l'objet qui est du type de la classe aui est de la sorte facture aue j4ecrase et aue je met le tableau
+		factureDuMardi.lireAchats(); // dans l'objet qui est du type de la classe aui est de la sorte facture aue j4ecrase et aue je met le tableau
 		factureDuMardi = factureDuMardi.preparerFacture();
 		factureDuMardi.afficherFacture();
 	}
@@ -25,18 +25,6 @@ public class Magasin
 	
 	
 	
-	public static float [] lireAchats()
-	{
-		float [] listeAchats = new float [5];
-		listeAchats [0] = 2.7f;
-		listeAchats [1] = 6f;
-		listeAchats [2] = 8.2f;
-		listeAchats [3] = 4.25f;
-		listeAchats [4] = 1.0f;
-		
-		return listeAchats;
-		//faire un return avec les valeurs de dans 
-	}
 	
 	
 	
