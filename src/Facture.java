@@ -20,5 +20,24 @@ public class Facture {
 		System.out.println("--------------------------");
 		System.out.println("Total:" + this.total + "$");
 	}
+
+	public static Facture preparerFacture(Facture facture )
+	{
+		//facture.sousTotal = calculerSommePrix(facture.listeAchats);
+		facture.tps = calculerTaxeFederale(facture.sousTotal);
+		facture.tvq = calculerTaxeProvincial(facture.sousTotal);
+		facture.total = facture.sousTotal + facture.tps + facture.tvq;		
+		return facture;
+	}
+	
+	public static float calculerTaxeFederale(float montant)
+	{
+		return montant = 0.05f;
+	}
+	
+	public static float calculerTaxeProvincial(float montant)
+	{
+		return montant = 0.09975f;
+	}
 }
 

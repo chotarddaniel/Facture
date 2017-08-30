@@ -18,19 +18,12 @@ public class Magasin
 		float tpsMardi = factureDuMardi.tps; //
 		
 		factureDuMardi.listeAchats = lireAchats(); // dans l'objet qui est du type de la classe aui est de la sorte facture aue j4ecrase et aue je met le tableau
-		factureDuMardi = preparerFacture(factureDuMardi);
+		factureDuMardi = factureDuMardi.preparerFacture(factureDuMardi);
 		factureDuMardi.afficherFacture();
 	}
 	
 	
-	public static Facture preparerFacture(Facture facture )
-	{
-		facture.sousTotal = calculerSommePrix(facture.listeAchats);
-		facture.tps = calculerTaxeFederale(facture.sousTotal);
-		facture.tvq = calculerTaxeProvincial(facture.sousTotal);
-		facture.total = facture.sousTotal + facture.tps + facture.tvq;		
-		return facture;
-	}
+	
 	
 	public static float [] lireAchats()
 	{
@@ -57,13 +50,5 @@ public class Magasin
 		return somme;
 	}
 	
-	public static float calculerTaxeFederale(float montant)
-	{
-		return montant = 0.05f;
-	}
 	
-	public static float calculerTaxeProvincial(float montant)
-	{
-		return montant = 0.09975f;
-	}
 }
