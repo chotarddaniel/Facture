@@ -1,16 +1,8 @@
 
-		// Création d'une structure -sans fonction - dans le contexte de la classe utilisateur
-	class Facture //instanciation ( une classe est tj vide)
-	{
-		float[] listeAchats = new float[5];
-		float sousTotal;
-		float tps;
-		float tvq;
-		float total;
-	}
 public class Magasin 
 {		
 	public static void main(String[] args) {
+		
 		
 		// Ce n'etait que sa recette, aucun espace mémoire n'est utilisé avec juste ceci
 		Facture factureDuLundi = new Facture(); // on crée pour vrai les variables de la recettes (listeAchats, sousTotal, tps, tpq, total)
