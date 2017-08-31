@@ -18,6 +18,16 @@ public class Facture {
 		this.listeAchats = this.lireAchats();
 	}
 	
+	public float getTps() 
+	
+	{
+		return this.tps;
+	}
+	
+	/*public void setTps(float nouvelleTps) 
+	{
+		this.tps = nouvelleTps;
+	}*/
 	public void afficher()
 	{
 		NumberFormat imprimeurNombres = NumberFormat.getCurrencyInstance();
