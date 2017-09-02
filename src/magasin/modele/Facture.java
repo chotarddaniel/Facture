@@ -90,6 +90,26 @@ public class Facture {
 		return listeAchats;
 		//faire un return avec les valeurs de dans 
 	}
+
+	public float[] getListeAchats() {
+		return listeAchats;
+	}
+
+	public void setListeAchats(float[] listeAchats) {
+		this.listeAchats = listeAchats;
+	}
+
+	public float getSousTotal() {
+		return sousTotal;
+	}
+
+	public float getTvq() {
+		return tvq;
+	}
+
+	public float getTotal() {
+		return total;
+	}
 	
 }
 
